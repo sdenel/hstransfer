@@ -1,3 +1,8 @@
+# What's this tool for?
+* You have a workstation you want to develop some stuffs on
+* You want to synchronize your content (less than a few Megabytes) to a remote server that can only access the Internet in http/https.
+* Then this tool is for you! :)
+
 # Use it!
 ```bash
 # Optionally, compile the Docker image on your side: docker build . -t sdenel/hstransfer 
@@ -5,11 +10,6 @@ docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER
 # One easy way to use it despite this long command line is with an alias:
 alias hstransfer-this-dir='docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="sde@..." -e HSTRANSFER_SSH_PATH="/var/www/..." -eHSTRANSFER_HTTP_PATH="https://download..." -ti sdenel/hstransfer'
 ```
-
-# What's this tool for?
-* You have a workstation you want to develop some stuffs on
-* You want to synchronize your content (less than a few Megabytes) to a remote server that can only access the Internet in http/https.
-* Then this tool is for you! :)
 
 # Requirements
 * You should have Docker installed on your workstation
