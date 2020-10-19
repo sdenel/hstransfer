@@ -26,7 +26,9 @@ Downloader: ensure new hash each time.
 * Secured:
     * built-in encryption
     * binaries are automatically deleted from the static web server at the end of the session.
-    
+  
+# See also
+* https://hub.docker.com/repository/docker/sdenel/hstransfer
 
 # Backlog...
 Contributions welcomed!
