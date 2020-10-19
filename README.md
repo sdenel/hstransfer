@@ -1,6 +1,7 @@
+# Use it!
 ```bash
-docker build . -t sdenel/hstransfer 
-docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_PATH="toto@something.com:/var/www/apache/somedir/" -eHSTRANSFER_HTTP_PATH="https://something.com/somedir/" -ti sdenel/hstransfer 
+# Optionally, compile the Docker image on your side: docker build . -t sdenel/hstransfer 
+docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="toto@something.com" -eHSTRANSFER_SSH_PATH="/var/www/apache/somedir/" -eHSTRANSFER_HTTP_PATH="https://something.com/somedir/" -ti sdenel/hstransfer 
 ```
 
 # What's this tool for?
@@ -18,7 +19,7 @@ or from docker if you don't trust me enough:
 TODO: compile downloader each time to ensure new hash?
 Downloader: ensure new hash each time.
 
-# Value compared to a bunch of bash commands
+# Aded value compared to a bunch of bash commands
 * Ability to work on Linux and Windows, without any pre-requirement on the remote side
 * Secured:
     * built-in encryption
