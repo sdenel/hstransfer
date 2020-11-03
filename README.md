@@ -6,9 +6,9 @@
 # Use it!
 ```bash
 # Optionally, compile the Docker image on your side: docker build . -t sdenel/hstransfer 
-docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="toto@something.com" -eHSTRANSFER_SSH_PATH="/var/www/apache/somedir/" -eHSTRANSFER_HTTP_PATH="https://something.com/somedir/" -ti sdenel/hstransfer 
+docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="toto@something.com" -eHSTRANSFER_SSH_PATH="/var/www/apache/somedir/" -eHSTRANSFER_HTTP_PATH="https://something.com/somedir/" -ti ghcr.io/sdenel/hstransfer
 # One easy way to use it despite this long command line is with an alias:
-alias hstransfer-this-dir='docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="sde@..." -e HSTRANSFER_SSH_PATH="/var/www/..." -eHSTRANSFER_HTTP_PATH="https://download..." -ti sdenel/hstransfer'
+alias hstransfer-this-dir='docker run -v$PWD:/directory_to_upload/ -v$HOME/.ssh/id_rsa:/id_rsa -eHSTRANSFER_SSH_HOST="sde@..." -e HSTRANSFER_SSH_PATH="/var/www/..." -eHSTRANSFER_HTTP_PATH="https://download..." -ti ghcr.io/sdenel/hstransfer'
 ```
 
 # Requirements
@@ -26,9 +26,6 @@ Downloader: ensure new hash each time.
 * Secured:
     * built-in encryption
     * binaries are automatically deleted from the static web server at the end of the session.
-  
-# See also
-* https://hub.docker.com/repository/docker/sdenel/hstransfer
 
 # Backlog...
 Contributions welcomed!
